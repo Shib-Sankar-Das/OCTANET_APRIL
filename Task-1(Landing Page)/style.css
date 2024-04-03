@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 40px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    max-width: 600px;
+}
+
+.content .textBox h2 {
+    font-size: 4em;
+    color: #333;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span {
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textBox p {
+    color: #333;
+}
+
+.content .textBox a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #017143;
+    padding: 8px 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 40px;
+    letter-spacing: 1px;
+}
+
+.content .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgBox img {
+    max-width: 340px;
+}
+
+.thumb {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thumb li {
+    list-style: none;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.thumb li:hover {
+    transform: translateY(-15px) scale(1.1);
+}
+
+.thumb li img {
+    max-width: 60px;
+}
+
+.thumb1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.thumb1 li {
+    list-style: none;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.thumb1 li:hover {
+    transform: translateY(-15px) scale(1.1);
+}
+
+.thumb1 li img {
+    max-width: 60px;
+}
+
+.sci {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px 0;
+    filter: invert(1);
+    transform: scale(0.6);
+}
+
+.sci1 {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.sci1 li {
+    list-style: none;
+}
+
+.sci1 li a {
+    display: inline-block;
+    text-decoration: none;
+    /*margin: 20px 0;*/
+    transition: 0.5s;
+    transform: scale(0.6);
+}
+
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(600px at right 800px);
+    background: #017143;
+}
+
+footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.my-button {
+    background-color: transparent;
+    border: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 32px;
+    float: left;
+    line-height: 70px;
+    display: none;
+  }
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1200px) {
+    section {
+        padding: 80px;
+    }
+    header {
+        padding: 40px;
+    }
+    header ul li a {
+        margin-left: 20px;
+    }
+    .content .imgBox {
+        width: 80%;
+        padding-right: 20px;
+    }
+    .content .imgBox img {
+        width: 300px;
+        padding-bottom: 150px;
+    }
+    .thumb {
+        display: none;
+    }
+    .thumb1 {
+        max-height: 50vh;
+        bottom: 10px;
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 50px;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute; /* Position the menu below the header */
+        align-items: center;
+        left: 0;
+        background-color: #fff; /* Optional: Background color for the menu */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for the menu */
+        padding-top: 20px;
+        z-index: 1000; /* Ensure menu appears above other elements */
+    }
+    header .logo {
+        z-index: 2000;;
+    }
+    
+    header .logo img {
+        max-width: 60px;
+    }
+
+    header ul.show {
+        display: flex;
+    }
+    
+    .my-button {
+        display: block;
+        position: absolute;
+        top: 20px; /* Adjust top position as needed */
+        right: 20px; /* Adjust right position as needed */
+        z-index: 1001; /* Ensure button appears above menu */
+    }
+
+    .content {
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content .textBox {
+        text-align: center;
+    }
+    .content .textBox h2 {
+        font-size: 2.5em;
+    }
+    .content .textBox h2 span {
+        text-shadow: #fff 1px 0 10px;
+        font-size: 1em;
+    }
+    .content .textBox p {
+        font-size: 0.9em;
+    }
+    .content .imgBox {
+        width: 80%;
+        justify-content: center;
+        padding-right: 0;
+        margin-top: 30px;
+    }
+    .btn
+    {
+        box-shadow: #fff 1px 0 10px;
+    }
+    .content .imgBox img {
+        width: 300px;
+        padding-bottom: 150px;
+    }
+    .thumb {
+        display: none;
+    }
+    .sci {
+        display: none;
+    }
+    .sci1 {
+        position: static;
+        margin-top: 20px;
+        display: flex;
+    }
+    .thumb1 {
+        max-height: 50vh;
+        bottom: 10px;
+        display: flex;
+    }
+}

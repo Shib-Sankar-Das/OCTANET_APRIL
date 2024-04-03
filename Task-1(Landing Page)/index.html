@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="Resources\logo.png" alt="Starbucks Logo"></a>
+            <ul id="mynav" class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="my-button" id="my-button">
+                <i class="fas fa-bars"></i>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>Discover the essence of Starbucks in every aromatic sip. 
+                    Delight in the rich, velvety texture and exquisite flavors meticulously curated to elevate your coffee experience. 
+                    With each cup, immerse yourself in the legacy of quality and innovation that sets Starbucks apart. 
+                    It's not just a coffee—it's a symphony of taste, a moment of indulgence, it's Starbucks.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="imgBox">
+                <img src="Resources\img1.png" class="starbucks" alt="Starbucks Coffee">
+            </div>
+            <ul class="thumb1">
+                <li><img src="Resources\thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#017143')"></li>
+                <li><img src="Resources\thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')"></li>
+                <li><img src="Resources\thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')"></li>
+            </ul>
+        </div>
+        <ul class="thumb">
+            <li><img src="Resources\thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#017143')"></li>
+            <li><img src="Resources\thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')"></li>
+            <li><img src="Resources\thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="Resources\facebook.png"></a></li>
+            <li><a href="#"><img src="Resources\instagram.png"></a></li>
+            <li><a href="#"><img src="Resources\twitter.png"></a></li>
+        </ul>
+    </section>
+    <footer>
+        <ul class="sci1">
+            <li><a href="#"><img src="Resources\facebook.png"></a></li>
+            <li><a href="#"><img src="Resources\instagram.png"></a></li>
+            <li><a href="#"><img src="Resources\twitter.png"></a></li>
+        </ul>
+        <p>&copy; 2024 Starbucks. All rights reserved.</p></footer>
+
+    
+        
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = "Resources\/" + anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+
+        const button = document.getElementById("my-button");
+        const nav = document.getElementById("mynav");
+
+        button.addEventListener('click', () => {
+        nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
