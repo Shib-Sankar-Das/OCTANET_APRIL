@@ -9,7 +9,9 @@
 </head>
 <body>
     <section>
-        <div class="circle"></div>
+        <div class="circle">
+            <img src="Resources\hello.gif" alt="Your Image">
+        </div>
         <header>
             <a href="#" class="logo"><img src="Resources\logo.png" alt="Starbucks Logo"></a>
             <ul id="mynav" class="nav-links">
@@ -23,26 +25,24 @@
         </header>
         <div class="content">
             <div class="textBox">
-                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
-                <p>Discover the essence of Starbucks in every aromatic sip. 
-                    Delight in the rich, velvety texture and exquisite flavors meticulously curated to elevate your coffee experience. 
-                    With each cup, immerse yourself in the legacy of quality and innovation that sets Starbucks apart. 
-                    It's not just a coffee—it's a symphony of taste, a moment of indulgence, it's Starbucks.</p>
-                <a href="#" class="btn">Order Now</a>
+                <h1><span>Code Kingdom</span><br>The Key to Your Digital Kingdom</h1>
+                <h2 id="name">Transforming Ideas into Apps:<br><span>App Development</span> Unleashed</h2>
+                <p id="para">embodies the relentless pursuit of innovation, converting imagination into tangible, user-centric experiences. With boundless creativity and technical expertise, it reshapes the mobile landscape, empowering businesses and individuals alike. Join the journey where ideas thrive and apps come to life, propelled by the limitless potential of Android Development Unleashed.</p>
+                <a href="#" class="btn">Explore</a>
             </div>
             <div class="imgBox">
-                <img src="Resources\img1.png" class="starbucks" alt="Starbucks Coffee">
+                <img src="Resources\appi.png" class="starbucks" alt="Starbucks Coffee">
             </div>
             <ul class="thumb1">
-                <li><img src="Resources\thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#017143')"></li>
-                <li><img src="Resources\thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')"></li>
-                <li><img src="Resources\thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')"></li>
+                <li><img src="Resources\appi1.png" onclick="imgSlider('appi.png','hello', 'Transforming Ideas into Apps:<br><span>App Development</span> Unleashed', 'embodies the relentless pursuit of innovation, converting imagination into tangible, user-centric experiences. With boundless creativity and technical expertise, it reshapes the mobile landscape, empowering businesses and individuals alike. Join the journey where ideas thrive and apps come to life, propelled by the limitless potential of Android Development Unleashed.'); changeCircleColor('#017143')"></li>
+                <li><img src="Resources\ai1.png" onclick="imgSlider('ai.png', 'a (4)', 'Future Forged:<br> <span>Generative AI</span> Igniting Innovation', 'encapsulates the dynamic synergy between technology and creativity, propelling us towards boundless possibilities. With every algorithmic stroke, it reshapes industries, redefines artistry, and heralds a new era of human-machine collaboration. Embrace the future, where innovation thrives and imagination knows no limits, all powered by Generative AI.'); changeCircleColor('#eb7495')"></li>
+                <li><img src="Resources\EH1.png" onclick="imgSlider('EH.png', 'cyber','Your Digital Guardian:<br><span>Cybersecurity</span> Reinvented', 'epitomizes a steadfast commitment to safeguarding your online presence in an ever-evolving digital landscape. It stands as a sentinel against threats, preserving the integrity of your data and privacy with unwavering vigilance. Trust in your protector, as it fortifies your digital realm, ensuring peace of mind in an interconnected world.'); changeCircleColor('#d752b1')"></li>
             </ul>
         </div>
         <ul class="thumb">
-            <li><img src="Resources\thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#017143')"></li>
-            <li><img src="Resources\thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')"></li>
-            <li><img src="Resources\thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')"></li>
+            <li><img src="Resources\appi1.png" onclick="imgSlider('appi.png','hello', 'Transforming Ideas into Apps:<br><span>App Development</span> Unleashed', 'embodies the relentless pursuit of innovation, converting imagination into tangible, user-centric experiences. With boundless creativity and technical expertise, it reshapes the mobile landscape, empowering businesses and individuals alike. Join the journey where ideas thrive and apps come to life, propelled by the limitless potential of Android Development Unleashed.'); changeCircleColor('#017143')"></li>
+            <li><img src="Resources\ai1.png" onclick="imgSlider('ai.png', 'a (4)', 'Future Forged:<br> <span>Generative AI</span> Igniting Innovation', 'encapsulates the dynamic synergy between technology and creativity, propelling us towards boundless possibilities. With every algorithmic stroke, it reshapes industries, redefines artistry, and heralds a new era of human-machine collaboration. Embrace the future, where innovation thrives and imagination knows no limits, all powered by Generative AI.'); changeCircleColor('#eb7495')"></li>
+            <li><img src="Resources\EH1.png" onclick="imgSlider('EH.png', 'cyber','Your Digital Guardian:<br><span>Cybersecurity</span> Reinvented', 'epitomizes a steadfast commitment to safeguarding your online presence in an ever-evolving digital landscape. It stands as a sentinel against threats, preserving the integrity of your data and privacy with unwavering vigilance. Trust in your protector, as it fortifies your digital realm, ensuring peace of mind in an interconnected world.'); changeCircleColor('#d752b1')"></li>
         </ul>
         <ul class="sci">
             <li><a href="#"><img src="Resources\facebook.png"></a></li>
@@ -56,13 +56,21 @@
             <li><a href="#"><img src="Resources\instagram.png"></a></li>
             <li><a href="#"><img src="Resources\twitter.png"></a></li>
         </ul>
-        <p>&copy; 2024 Starbucks. All rights reserved.</p></footer>
+        <p>&copy; 2024 Code Kingdom. All rights reserved.</p></footer>
 
     
         
     <script type="text/javascript">
-        function imgSlider(anything){
+        function imgSlider(anything,bg,heading,p_tag) {
             document.querySelector('.starbucks').src = "Resources\/" + anything;
+            var circleDiv = document.querySelector(".circle");
+            // Change the content of the div
+            circleDiv.innerHTML = "<img src='Resources/"+bg+".gif' alt='New Image'>";
+            var h2Element = document.getElementById("name");
+            // Change the content of the h2 tag
+            h2Element.innerHTML = heading; // Example change
+            var Para = document.getElementById("para");
+            Para.innerHTML = p_tag;
         }
 
         function changeCircleColor(color){

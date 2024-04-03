@@ -63,17 +63,40 @@ header ul li a {
 }
 
 .content .textBox h2 {
-    font-size: 4em;
+    padding-top: 20px;
+    font-size: 2em;
     color: #333;
     line-height: 1.4em;
     font-weight: 500;
 }
+
 
 .content .textBox h2 span {
     color: #017143;
     font-size: 1.2em;
     font-weight: 900;
 }
+
+
+
+.content .textBox h1{
+    padding-top: 40px;
+    font-size: 2.5em;
+    color: #333;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h1 span {
+    color: #00f58f;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+
+
+
+
 
 .content .textBox p {
     color: #333;
@@ -205,6 +228,17 @@ header ul li a {
     background: #017143;
 }
 
+
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image fills the circular div */
+    position: absolute; /* This allows absolute positioning inside the div */
+    top: 0; /* Position the image at the top of the div */
+    left: 0; /* Position the image at the left of the div */
+  }
+
 footer {
     text-align: center;
     background-color: #f2f2f2;
@@ -301,13 +335,30 @@ footer {
     }
     .content .textBox h2 {
         font-size: 2.5em;
+        color: #fff;
     }
+
+    .content .textBox h1 {
+        padding-top: 10px;
+        text-shadow: #fff 1px 0 10px;
+        line-height: 1.4em;
+        font-size: 2.3em;
+        color: aqua;
+    }
+
     .content .textBox h2 span {
         text-shadow: #fff 1px 0 10px;
         font-size: 1em;
     }
+
+    .content .textBox h1 span {
+        text-shadow: none;
+        line-height: 1.4em;
+        font-size: 1.8em;
+    }
     .content .textBox p {
         font-size: 0.9em;
+        color: #fff;
     }
     .content .imgBox {
         width: 80%;
