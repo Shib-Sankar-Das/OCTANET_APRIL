@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+/*@import url('https://fonts.cdnfonts.com/css/luminari');*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "MedievalSharp", cursive;
+}
+
+body {
+    background-image: url(Resources/bg1.jpg);
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+}
+
+/*.medievalsharp-regular {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.kristi-regular {
+  font-family: "Kristi", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bonheur-royale-regular {
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+font-family: 'Luminari', sans-serif;  
+  */
+
+/*body {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 400;
+    font-style: normal;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header .logo {
+    display: flex;
+}
+
+header .logo a{
+    position: relative;
+    min-width: 40px;
+}
+
+header .logo h2{
+    list-style: none;
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-family: "MedievalSharp", cursive;
+}
+
+header .logo:hover h2{
+    display: inline-block;
+    animation: fadelogo 2s;
+}
+
+@keyframes fadelogo {
+    from {
+      opacity: 0;
+      transform: translateX(-300deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    margin-left: 40px;
+    font-family: "MedievalSharp", cursive;
+}
+
+.my-button {
+    background-color: transparent;
+    border: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 32px;
+    float: left;
+    line-height: 70px;
+    display: none;
+}
+  
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 2s;
+}
+
+.content .textBox {
+    max-width: 600px;
+}
+
+.content .textBox h1{
+    padding-top: 40px;
+    font-size: 2.5em;
+    color: #fffb00;
+    line-height: 1.4em;
+    font-weight: 500;
+    /*font-family: "Kristi", cursive;*/
+}
+
+.content .textBox h1 span {
+    color: #896d4d;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+
+.content .textBox p {
+    color: #ffffff;
+    font-size: 2em;
+    font-family: "Bonheur Royale", cursive;
+}
+
+.content .textBox a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #017143;
+    padding: 8px 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.content .imgBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgBox img {
+    max-width: 340px;
+}
+
+.wooden-text {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    mix-blend-mode: darken;
+    text-shadow: 0 0 0.05em rgba(0, 0, 0, 0.2), -0.025em 0.025em 0.1em #000,
+      -0.05em 0.05em 0.1em #000, -0.1em 0.1em 0.3em #000,
+      -0.1em 0.1em 0.5em rgba(0, 0, 0, 0.5);
+    translate: translate3d(0, 0, 0);
+    font-size: 32vmin;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  
+  .small {
+    font-size: 0.475em;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10deg);
+    }
+
+
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+ 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    justify-items: center;
+    text-align: center;
+    margin: 5% auto; /* 15% from the top and centered */
+    border-radius: 10px;
+    width: 60%;
+    height: 75%; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content div{
+    display: block;
+    position: flex;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 10px 0;
+    border-radius: 10px;
+      /*Could be more or less, depending on screen size */
+  }
+
+  .modal-content div div{
+    justify-items: center;
+    text-align: center;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%; /* Could be more or less, depending on screen size */
+    z-index: 10;
+  }
+
+.modal-content input {
+    justify-items: center;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #333;
+    background: transparent;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.modal-content input:focus {
+    
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.modal-content button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #017143;
+    padding: 8px 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+#popupText {
+    justify-items: center;
+    transform: translateY(-150%);
+    width: 500px;
+}
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    padding: 10px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
