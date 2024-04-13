@@ -288,13 +288,17 @@ header ul li a {
     height: 75%; /* Could be more or less, depending on screen size */
   }
 
+
+
   .modal-content div{
     display: block;
-    position: flex;
-    margin: 5% auto; /* 15% from the top and centered */
+    position: relative;
+    margin: 100px auto; /* 15% from the top and centered */
     padding: 10px 0;
     border-radius: 10px;
+    width: 100%;
       /*Could be more or less, depending on screen size */
+    
   }
 
   .modal-content div div{
@@ -325,6 +329,12 @@ header ul li a {
     cursor: pointer;
 }
 
+#alert1{
+  display: none;
+  padding-top: 10px;
+  color: red;
+  font-size: 1.2rem;
+}
 
 .modal-content button {
     display: inline-block;
@@ -388,11 +398,10 @@ header ul li a {
     border: none;
     border-bottom: 2px solid #333;
     background: transparent;
-    /*padding: 10px 20px;
-    margin-top: 20px;*/
     font-size: 1.5rem;
     color: #fff;
     margin-left: 20px;
+    caret-color: white;
 }
 
 .addTask input:focus {
@@ -427,16 +436,20 @@ header ul li a {
 }
 
 
+.alert2::placeholder{
+  color: rgba(255, 0, 0, 0.425);
+}
+
 .container1{
     position: absolute;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 70%;
     margin-left: 100px;
     margin-top: 180px;
     height: 64%;
+
 }
 
 .container1 h2{
@@ -454,6 +467,10 @@ header ul li a {
 
 .container1 ul li{
   padding: 10px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 5px;
 }
 
 .container1::-webkit-scrollbar-track {
@@ -479,10 +496,51 @@ header ul li a {
     position: relative;
     width: 100%;
     display: grid;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     flex-direction: column;
     padding: 20px 20px; /* Set the height of the container */
-    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
     /*z-index: 1;*/
+}
+
+
+
+.todoList li img{
+  position: relative;
+  width: 25px;
+  margin-right: 10px;
+  top: 5px;
+}
+
+.checked{
+  text-decoration: line-through;
+  color: #333333c7;
+}
+
+
+.todoList li.checked::after{
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 39px;
+  /*border-radius: 50%;*/
+  background-image: url(Resources/completed.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 60px;
+}
+
+.todoList li span{
+  font-size: 1.7em;
+  color: #333;
+  font-weight: 500;
+  position: absolute;
+  right: 25px;
+}
+
+.todoList li span:hover{
+  cursor: pointer;
+  color: red;
 }

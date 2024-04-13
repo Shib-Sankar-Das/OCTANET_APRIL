@@ -16,7 +16,7 @@
             </div>
             <ul id="mynav" class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">List</a></li>
+                <li><a href="#" onclick="loadList()">List</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -41,94 +41,24 @@
               <span class="close">&times;</span>
               <div  class="container">
                 <h2>Enter the Name of the list</h2>
-                <input type="text" placeholder="To Do List">
-                <button id="submit"  class="submitButton">Submit</button>
+                <input id="input-box1" type="text" placeholder="To Do List">
+                <h2 id="alert1">Please, Enter the list name</h2>
+                <button id="submit"  class="submitButton" onclick="createNew()">Submit</button>
               </div>
             </div>
             </div>
         </div>
         <div id="gif">
             <div class="addTask">
-                <input type="text" placeholder="Enter The task name">
-                <button>Add</button>
+                <input id="input-box2" type="text" placeholder="Enter The task name">
+                <button id="add" onclick="addItem()">Add</button>
             </div>
             <div  class="taskList">
+                
                 <img src="Resources\list1.png" alt="">
                 <div class="container1">
-                    <h2>Task List</h2>
-                    <ul class="todoList">
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
-                        <li>Task 1</li>
-                        <li>Task 2</li>
-                        <li>Task 3</li>
-                        <li>Task 4</li>
+                    <h2 id="heading">Task List</h2>
+                    <ul id="list" class="todoList">
                         
                     </ul>
                 </div>
