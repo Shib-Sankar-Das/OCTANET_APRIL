@@ -51,7 +51,7 @@ font-family: 'Luminari', sans-serif;
     box-sizing: border-box;
 }*/
 
-section {
+#page {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -103,7 +103,8 @@ header .logo h2{
     font-size: 2.4rem;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 30px;
+    padding-left: 10px;
     font-family: "MedievalSharp", cursive;
 }
 
@@ -247,6 +248,21 @@ header ul li a {
     }
   }
 
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+
+    to{
+      opacity: 0;
+      transform: translateX(-10deg);
+    }
+  }
+
+
  
 /* The Modal (background) */
 .modal {
@@ -344,3 +360,129 @@ header ul li a {
     text-decoration: none;
     cursor: pointer;
   }
+
+
+  #gif{
+    position: relative;
+    justify-items: center;
+    align-self:center;
+    flex-direction: column;
+    margin-top: 5%;
+    display: none;
+  }
+
+.addTask{
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.addTask input {
+    border: none;
+    border-bottom: 2px solid #333;
+    background: transparent;
+    /*padding: 10px 20px;
+    margin-top: 20px;*/
+    font-size: 1.5rem;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.addTask input:focus {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.addTask button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #017143;
+    padding: 0px 20px;
+    margin-left: 20px;
+    /*margin-top: 20px;*/
+    font-weight: 500;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+.taskList{
+    position: relative;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px 0px;
+    /*z-index: 1;*/
+}
+
+
+.container1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 100px;
+    margin-top: 180px;
+    height: 64%;
+}
+
+.container1 h2{
+    color: #020202;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px solid #333;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container1 ul li{
+  padding: 10px;
+}
+
+.container1::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #f1f1f146; /* Color of the track */
+  border: none;
+}
+
+/* Handle */
+.container1::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle on hover */
+.container1::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+
+
+.todoList{
+    position: relative;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px; /* Set the height of the container */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    /*z-index: 1;*/
+}
