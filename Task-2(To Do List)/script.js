@@ -1,19 +1,34 @@
 // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
+var modal = document.getElementById("myModal"); // Get the button that opens the modal
+var btn = document.getElementById("myBtn");// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
 var maindiv = document.querySelector(".content");
-
 var submit = document.getElementById("submit");
-
 var gifElement = document.getElementById('gif');
-
 var page = document.getElementById("page");
+let slider = document.querySelector(".sidebar");
+let cap = document.querySelector(".menu-btn");
+let pen = document.querySelector(".menu-btn1");
+let black = document.querySelector(".blur-background");
+
+
+function openNav() {
+  /*slider.style.display = "flex";
+  slider.style.transform = "translateX(0)";*/
+  black.classList.toggle("active");
+  slider.classList.toggle("sidebar1");
+  cap.classList.toggle("menu-btnfinal");
+  pen.classList.toggle("menu-btnfinal1");
+}
+
+function closeNav() {
+  /*slider.style.transform = "translateX(100%)";
+  slider.style.display = "none";*/
+  black.classList.remove("active");
+  slider.classList.remove("sidebar1");
+  cap.classList.remove("menu-btnfinal");
+  pen.classList.remove("menu-btnfinal1");
+}
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -42,10 +57,8 @@ if (window.matchMedia('(max-width: 768px)').matches) {
 var input_box1 = document.getElementById("input-box1");
 var heading = document.getElementById("heading");
 var alert1 = document.getElementById("alert1");
-
 var input_box2 = document.getElementById("input-box2");
 var list = document.getElementById("list");
-
 let container1 = document.querySelector(".container1");
 
 
@@ -83,6 +96,7 @@ function createNew() {
   clearData();
   saveData();
   loadData();
+  console.log("Bey");
 }
 
 
@@ -117,8 +131,7 @@ function addItem() {
     input_box2.value = "";
   }
     saveData();
-    loadData();
-    
+    loadData(); 
   
 }
 
@@ -158,7 +171,7 @@ function clearData() {
 
 
 function loadList(){
-  maindiv.style.animation = 'fadeOut 3s';
+    maindiv.style.animation = 'fadeOut 3s';
     maindiv.addEventListener('animationend', function() {
     // Set display to 'none' after animation ends
     maindiv.style.display = 'none';
@@ -166,6 +179,20 @@ function loadList(){
     gifElement.style.display = 'flex';
     gifElement.style.animation = 'fadeIn 3s';
     loadData();
+    console.log("Hi")
   });
+}
+
+function back_home(){
+  
+    gifElement.style.animation = 'fadeOut 3s';
+    gifElement.addEventListener('animationend', function () {
+      gifElement.style.display = 'none';
+      page.style.justifyContent = 'center';
+      maindiv.style.display = 'flex';
+      maindiv.style.animation = 'fadeIn 3s';
+      console.log("Hello")
+    });
+    
 }
 

@@ -57,7 +57,7 @@ font-family: 'Luminari', sans-serif;
     min-height: 100vh;
     padding: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -124,15 +124,15 @@ header .logo:hover h2{
     }
 }
 
-header ul {
+header #mynav {
     display: flex;
 }
 
-header ul li {
+header #mynav li {
     list-style: none;
 }
 
-header ul li a {
+header #mynav li a {
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -142,6 +142,54 @@ header ul li a {
     margin-left: 40px;
     font-family: "MedievalSharp", cursive;
 }
+
+
+
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0; /* Changed from left: 0 */
+  height: 100vh;
+  width: 250px;
+  background-color: #ffffff48;
+  backdrop-filter: blur(20px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform: translateX(100%); /* Removed transform property */
+  transition: 1s;
+  padding-top: 75px;
+}
+
+.sidebar li{
+  width: 100%;
+  list-style: none;
+}
+
+.sidebar a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 20px 20px;
+    margin-left: 40px;
+    font-family: "MedievalSharp", cursive;
+    border-bottom: 1px solid transparent
+}
+
+.sidebar1{
+  transform: translateX(0);
+  transition: 0.5s;
+}
+
+
+
 
 .my-button {
     background-color: transparent;
@@ -545,16 +593,81 @@ header ul li a {
   color: red;
 }
 
+.menu-btn{
+  display: none;
+  right: 0px;
+  z-index: 1001;
+  position: absolute;
+  transform: translateX(0px);
+  transition: 0.5s;
+}
 
+.menu-btn a{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.menu-btn img{
+  height: 50px;
+  cursor: pointer;
+}
+
+.menu-btn img:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease all;
+}
+
+.menu-btnfinal{
+  transform: translateX(-140px);
+  transition: 0.5s;
+  position: fixed;
+}
+
+.menu-btnfinal1{
+  position: fixed;
+}
+
+.menu-btn1{
+  display: none;
+  right: 0px;
+  z-index: 1000;
+}
+
+.menu-btn1 a{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.menu-btn1 img{
+  height: 50px;
+  cursor: pointer;
+}
+
+.blur-background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000a1;
+  z-index: 998;
+  display: none;
+}
+
+.active{
+  display: block;
+  transition: 1s;
+}
 
 
 /* For screens smaller than 768px (tablets and below) */
 @media only screen and (max-width: 768px) {
   header {
-      padding: 20px 20px;
+      padding: 20px;
+      padding-right: 0;
   }
 
-  header ul {
+  header #mynav .hidden{
       display: none;
   }
   
@@ -566,9 +679,9 @@ header ul li a {
 
 
   header .logo h2 {
-      width: 280px;
-      padding-top: 15px;
-      font-size: 2rem;
+      width: 150px;
+      padding: 10px;
+      font-size: 1.5rem;
       display: none;
   }
 
@@ -634,8 +747,8 @@ header ul li a {
 }
 
 .todoList li.checked::after {
-  width: 25px;
-  height: 29px;
+  width: 31px;
+  height: 25px;
   right: 25px;
 }
 
@@ -668,6 +781,10 @@ header ul li a {
     width: 1000%;
   }
   
+  .addTask {
+    z-index: 0;
+  }
+
   .addTask input{
     font-size: 20px;
   }
@@ -681,8 +798,13 @@ header ul li a {
   
   }
 
+  .menu-btn{
+    display: block;
+  }
 
-
+  .menu-btn1{
+    display: block;
+  }
 
 
 }

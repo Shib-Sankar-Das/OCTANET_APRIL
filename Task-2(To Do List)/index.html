@@ -14,14 +14,22 @@
             <a href="#"><img src="Resources\logo1.png" alt="Logo"></a>
                 <h2>Duty of Dynasty</h2>
             </div>
-            <ul id="mynav" class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#" onclick="loadList()">List</a></li>
+            <ul class="sidebar">
+                <li class="menu-btn1"></a></li>
+                <li><a href="#" onclick="back_home(), closeNav()">Home</a></li>
+                <li><a href="#" onclick="loadList(), closeNav()">List</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <button class="my-button" id="my-button">
-                <i class="fas fa-bars"></i>
+            <div class="blur-background"></div>
+            <ul id="mynav" class="nav-links">
+                <li><a class="hidden" href="#" onclick="back_home()">Home</a></li>
+                <li><a class="hidden" href="#" onclick="loadList()">List</a></li>
+                <li><a class="hidden" href="#">About Us</a></li>
+                <li><a class="hidden" href="#">Contact</a></li>
+                <li class="menu-btn" onclick="openNav()"><a href="#"><img src="Resources\cap.png" alt="Pen Cap"></a></li>
+                <li class="menu-btn1" onclick="closeNav()"><a href="#"><img src="Resources\pen.png" alt="Pen Cap"></a></li>
+            </ul>
         </header>
         <div class="content">
             <div>
