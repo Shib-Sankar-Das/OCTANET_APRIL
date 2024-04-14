@@ -32,8 +32,12 @@ window.onclick = function(event) {
   }
 }
 
+let modal_bg = document.getElementById("modal-bg");
 
-
+if (window.matchMedia('(max-width: 768px)').matches) {
+  /* Change the image source for smaller screens */
+  modal_bg .src = 'Resources/list1.png'; // Specify the path to the new image
+}
 
 var input_box1 = document.getElementById("input-box1");
 var heading = document.getElementById("heading");

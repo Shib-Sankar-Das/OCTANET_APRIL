@@ -544,3 +544,160 @@ header ul li a {
   cursor: pointer;
   color: red;
 }
+
+
+
+
+/* For screens smaller than 768px (tablets and below) */
+@media only screen and (max-width: 768px) {
+  header {
+      padding: 20px 20px;
+  }
+
+  header ul {
+      display: none;
+  }
+  
+  header .logo img{
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+  }
+
+
+  header .logo h2 {
+      width: 280px;
+      padding-top: 15px;
+      font-size: 2rem;
+      display: none;
+  }
+
+  .my-button {
+      display: inline-block;
+  }
+
+  .content {
+      justify-content: center;
+      flex-direction: column;
+      padding: 50px 20px;
+  }
+
+  .content div img {
+      width:  300px;
+  }
+
+  .wooden-text {
+    mix-blend-mode: normal;
+    text-shadow: 
+    0 0 0.05em rgba(255, 255, 255, 0.2), -0.025em 0.025em 0.1em #ffffff,
+    -0.05em 0.05em 0.1em #ffffff, -0.1em 0.1em 0.3em #ffffff,
+    -0.1em 0.1em 0.5em rgba(255, 255, 255, 0.5);
+  }
+
+  .content .textBox {
+      text-align: center;
+      margin-top: 30px;
+  }
+
+  .content .imgBox {
+      justify-content: center;
+  }
+
+  .content .textBox h1 {
+      font-size: 2em;
+  }
+
+  .content .textBox p {
+      font-size: 1.5em;
+  }
+
+  .container1 {
+      /*margin-top: 30px;*/
+      margin-left: 55px;
+      align-items: center;
+  }
+
+  .container1 h2 {
+      font-size: 2em;
+  }
+
+  .todoList{
+    padding: 0px;
+  }
+  .todoList li{
+    padding: 10px 0px;
+    font-size: 1em !important;
+  }
+
+  .todoList li span {
+    right: 5px;
+}
+
+.todoList li.checked::after {
+  width: 25px;
+  height: 29px;
+  right: 25px;
+}
+
+  #popupText {
+      width: 80%;
+  }
+
+  .taskList {
+      margin-top: 10%;
+  }
+  
+  .modal-content{
+    margin-top: 50%;
+    width: 100%;
+    
+  }
+  .modal-content img{
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+  }
+  #popupText{
+    height: 400px;
+  }
+  #popupText input{
+    width: 100%;
+  }
+
+  #gif{
+    width: 1000%;
+  }
+  
+  .addTask input{
+    font-size: 20px;
+  }
+
+  .addTask button{
+    font-size: 20px;
+  }
+
+  .taskList img{
+    width: 375px;
+  
+  }
+
+
+
+
+
+}
+
+/* For screens smaller than 480px (phones and below) */
+@media only screen and (max-width: 480px) {
+  .content .textBox h1 {
+      font-size: 1.5em;
+  }
+
+  .content .textBox p {
+      font-size: 1.2em;
+  }
+
+  .container1 {
+      margin-top: 100px;
+  }
+}
