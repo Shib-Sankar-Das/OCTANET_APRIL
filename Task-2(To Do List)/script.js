@@ -81,32 +81,25 @@ function createNew() {
     /*console.log("Please enter a task");*/
   } 
   else {
+    clearData();
     alert1.style.display = "none";
     modal.style.display = "none";
     maindiv.style.animation = 'fadeOut 3s';
-    maindiv.addEventListener('animationend', function() {
+    setTimeout(() => {
     // Set display to 'none' after animation ends
     maindiv.style.display = 'none';
     page.style.justifyContent = 'center';
     gifElement.style.display = 'flex';
     gifElement.style.animation = 'fadeIn 3s';
-  });
+  },3000);
     heading.innerHTML = input_box1.value;
+    list.innerHTML = "";
   }
-  clearData();
   saveData();
   loadData();
   console.log("Bey");
 }
 
-
-
-input_box2.addEventListener("focus", function() {
-  // When input field receives focus, hide the heading
-  input_box2.placeholder = "";
-  input_box2.classList.remove("alert2");
-  alert1.style.display = "none";
-});
 
 input_box2.addEventListener("blur", function() {
   // When input field receives focus, hide the heading
@@ -170,29 +163,37 @@ function clearData() {
 }
 
 
-function loadList(){
-    maindiv.style.animation = 'fadeOut 3s';
-    maindiv.addEventListener('animationend', function() {
-    // Set display to 'none' after animation ends
-    maindiv.style.display = 'none';
-    page.style.justifyContent = 'center';
-    gifElement.style.display = 'flex';
-    gifElement.style.animation = 'fadeIn 3s';
-    loadData();
-    console.log("Hi")
-  });
+let isLoading = false;
+let isGoingBack = false;
+
+function loadList() {
+    if (!isLoading) {
+        isLoading = true;
+        maindiv.style.animation = 'fadeOut 3s';
+        setTimeout(() => {
+            maindiv.style.display = 'none';
+            page.style.justifyContent = 'center';
+            gifElement.style.display = 'flex';
+            gifElement.style.animation = 'fadeIn 3s';
+            loadData();
+            isLoading = false;
+            console.log("Hi");
+        }, 3000);
+    }
 }
 
-function back_home(){
-  
-    gifElement.style.animation = 'fadeOut 3s';
-    gifElement.addEventListener('animationend', function () {
-      gifElement.style.display = 'none';
-      page.style.justifyContent = 'center';
-      maindiv.style.display = 'flex';
-      maindiv.style.animation = 'fadeIn 3s';
-      console.log("Hello")
-    });
-    
+function back_home() {
+    if (!isGoingBack) {
+        isGoingBack = true;
+        gifElement.style.animation = 'fadeOut 3s';
+        setTimeout(() => {
+            gifElement.style.display = 'none';
+            maindiv.style.display = 'flex';
+            maindiv.style.animation = 'fadeIn 3s';
+            isGoingBack = false;
+            console.log("Hello");
+        }, 3000);
+    }
 }
+
 

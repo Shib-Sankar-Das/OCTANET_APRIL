@@ -660,6 +660,11 @@ header #mynav li a {
 }
 
 
+.activitv{
+  display: flex;
+  animation: fadeIn 3s;
+}
+
 /* For screens smaller than 768px (tablets and below) */
 @media only screen and (max-width: 768px) {
   header {
