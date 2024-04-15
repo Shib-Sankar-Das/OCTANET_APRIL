@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
-/*@import url('https://fonts.cdnfonts.com/css/luminari');*/
 
 *{
     margin: 0;
@@ -13,43 +12,9 @@
 body {
     background-image: url(Resources/bg1.jpg);
     background-size: cover;
-    /*background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
 }
 
-/*.medievalsharp-regular {
-    font-family: "MedievalSharp", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-.kristi-regular {
-  font-family: "Kristi", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.bonheur-royale-regular {
-  font-family: "Bonheur Royale", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-font-family: 'Luminari', sans-serif;  
-  */
-
-/*body {
-    font-family: 'MedievalSharp', cursive;
-    font-weight: 400;
-    font-style: normal;
-    background: #f5f5f5;
-    color: #333;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}*/
 
 #page {
     position: relative;
@@ -60,18 +25,6 @@ font-family: 'Luminari', sans-serif;
     justify-content: center;
     align-items: center;
 }
-
-
-/*header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}*/
 
 header {
     position: absolute;
@@ -222,7 +175,6 @@ header #mynav li a {
     color: #fffb00;
     line-height: 1.4em;
     font-weight: 500;
-    /*font-family: "Kristi", cursive;*/
 }
 
 .content .textBox h1 span {
@@ -430,7 +382,6 @@ header #mynav li a {
   }
 
 .addTask{
-    /*display: none;*/
     position: absolute;
     top: 0;
     left: 0;
@@ -465,7 +416,6 @@ header #mynav li a {
     background: #017143;
     padding: 0px 20px;
     margin-left: 20px;
-    /*margin-top: 20px;*/
     font-weight: 500;
     border-radius: 40px;
     letter-spacing: 1px;
@@ -480,7 +430,6 @@ header #mynav li a {
     align-items: start;
     flex-direction: column;
     padding: 20px 0px;
-    /*z-index: 1;*/
 }
 
 
@@ -544,12 +493,10 @@ header #mynav li a {
     position: relative;
     width: 100%;
     display: grid;
-    /*justify-content: center;*/
     align-items: center;
     flex-direction: column;
     padding: 20px 20px; /* Set the height of the container */
     overflow-y: auto; /* Enable vertical scrolling */
-    /*z-index: 1;*/
 }
 
 
@@ -572,7 +519,6 @@ header #mynav li a {
   position: absolute;
   height: 30px;
   width: 39px;
-  /*border-radius: 50%;*/
   background-image: url(Resources/completed.png);
   background-size: cover;
   background-position: center;
@@ -730,7 +676,6 @@ header #mynav li a {
   }
 
   .container1 {
-      /*margin-top: 30px;*/
       margin-left: 55px;
       align-items: center;
   }

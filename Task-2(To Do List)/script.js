@@ -13,8 +13,6 @@ let black = document.querySelector(".blur-background");
 
 
 function openNav() {
-  /*slider.style.display = "flex";
-  slider.style.transform = "translateX(0)";*/
   black.classList.toggle("active");
   slider.classList.toggle("sidebar1");
   cap.classList.toggle("menu-btnfinal");
@@ -22,8 +20,6 @@ function openNav() {
 }
 
 function closeNav() {
-  /*slider.style.transform = "translateX(100%)";
-  slider.style.display = "none";*/
   black.classList.remove("active");
   slider.classList.remove("sidebar1");
   cap.classList.remove("menu-btnfinal");
@@ -78,7 +74,6 @@ input_box1.addEventListener("blur", function() {
 function createNew() {
   if(input_box1.value === "") {
     alert1.style.display = "block";
-    /*console.log("Please enter a task");*/
   } 
   else {
     clearData();
